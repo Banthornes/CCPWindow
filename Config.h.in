@@ -1,0 +1,5 @@
+// The configured options and settings.
+#define CCPWindow_VERSION_MAJOR @CCPWindow_VERSION_MAJOR@
+#define CCPWindow_VERSION_MINOR @CCPWindow_VERSION_MINOR@
+#define CCPWindow_VERSION_MINI @CCPWindow_VERSION_MINI@
+#define CCPWindow_VERSION_MICRO @CCPWindow_VERSION_MICRO@
