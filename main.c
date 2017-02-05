@@ -1,18 +1,16 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-#include "Config.h"
+#include <Windows.h>
 
-int main(int argc, char* argv[])
+char windowClassName[] = "Hello World in C";
+char windowCaption[] = "Hello World in C";
+
+int main()
 {
-	if(argc < 2)
-	{
-		fprintf(stdout,"%s Version %d.%d.%d.%d\n",
-            		argv[0],
-            		CCPWindow_VERSION_MAJOR,
-            		CCPWindow_VERSION_MINOR,
-			CCPWindow_VERSION_MINI,
-			CCPWindow_VERSION_MICRO);
-	}	
+	int windowWidth = 640;
+	int windowHeight = 480;
+
+	HINSTANCE hInstance = GetModuleHandle(NULL);
+	CreateWindow(windowClassName, windowCaption, WS_OVERLAPPED, 960 - windowWidth, 540 - windowHeight, windowWidth, windowHeight, NULL, NULL, hInstance, NULL);
+
+	//CreateWindowEx(); // extended window styles.
 	return 0;
 }
